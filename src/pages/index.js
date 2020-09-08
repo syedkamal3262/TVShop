@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <Layout>
       <div className="category">
-        hello
         <Homegrid />
       </div>
     </Layout>
