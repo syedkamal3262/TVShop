@@ -1,18 +1,19 @@
 import React from "react"
-import { graphql} from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ProductGrid from "../components/productGrid"
 
-
 const ComponentName = ({ data }) => {
-return(
-  <Layout>
-  <div>
+  return (
+    <Layout>
+      <div>
         <p className="breadcrumb">Home / TV</p>
-        {data.allContentfulProduct.nodes.map((product)=><ProductGrid key={product.sku} product={product}/>)}
-  </div>
-  </Layout>
-)
+        {data.allContentfulProduct.nodes.map(product => (
+          <ProductGrid key={product.sku} product={product} />
+        ))}
+      </div>
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -26,8 +27,7 @@ export const query = graphql`
         }
         image {
           fluid {
-            src
-          
+            ...GatsbyContentfulFluid
           }
         }
         priceNow
@@ -39,7 +39,3 @@ export const query = graphql`
 `
 
 export default ComponentName
-
-
-
-

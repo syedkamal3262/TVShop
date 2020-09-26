@@ -1,91 +1,97 @@
-.Layout{
-    margin: 0px;
-    padding: 0px !important;
-}
-ul{
-    display: inline-flex;
-    flex-direction: row;
-    letter-spacing: 2px;
-    justify-content: center;
-    width: 100%;
-    align-items: baseline;
-    align-content: center;
-
-}
-ul li{
-    list-style: none;
-    padding-right: 1em;
-    font-weight: bold;
-}
-ul li a{
-    text-decoration: none;
-}
-ul li a:hover{
-    color: #0074cc;
-}
-.product{
-    border:2px solid #7B8788;
-    padding:0px ;
-    border-radius: 5px 5px;
-    padding: 2%;
-    padding-top: 0px !important;
-    margin-bottom: 2%;
-    text-align: justify;
-    }
-
-.product h3,.product h2,.product h1{
-margin: 0px;
+.Layout {
+  margin: 0px;
+  padding: 0px !important;
 }
 
-h2,h3 ,p ,td ,b ,a ,s ,li{
-    color:#616C6F;
-    text-align: justify;
+ul {
+  display: flex;
+  letter-spacing: 2px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
-h1{
-    color: #4C4B4B;
+ul li {
+  list-style: none;
+  padding-right: 1em;
+  font-weight: bold;
 }
-.productdetail>div{
-    display: inline-block;
-    width: 50%;
+ul li a {
+  text-decoration: none;
 }
-tr>td{
-    width:100%;
+ul li a:hover {
+  color: #0074cc;
+}
+.product {
+  border: 2px solid #7b8788;
+  padding: 0px;
+  border-radius: 5px 5px;
+  padding: 2%;
+  padding-top: 0px !important;
+  margin-bottom: 2%;
+  text-align: justify;
+}
+
+.product h3,
+.product h2,
+.product h1 {
+  margin: 0px;
+}
+
+h2,
+h3,
+p,
+td,
+b,
+a,
+s,
+li {
+  color: #616c6f;
+  text-align: justify;
+}
+h1 {
+  color: #4c4b4b;
+}
+.productdetail > div {
+  display: inline-block;
+  width: 50%;
+}
+tr > td {
+  width: 100%;
 }
 th {
-    color:#616C6F !important;
-    font-weight: bolder;
+  color: #616c6f !important;
+  font-weight: bolder;
 }
-.category{
-    width:100%;
+.category {
+  width: 100%;
 }
-hr{
-    padding: 0px;
-    margin: 0px;
+hr {
+  padding: 0px;
+  margin: 0px;
 }
-.shop{
-    position: absolute;
-    top: 20%;
-    z-index: 1;
-    left: 20%;
-    color: white;
-
+.shop {
+  position: absolute;
+  top: 20%;
+  z-index: 1;
+  left: 20%;
+  color: white;
 }
-.productSpecs{
-    width: 60%;
+.productSpecs {
+  width: 60%;
 }
-.breadcrumb{
-    font-size: 15px;
-    margin-top:0px;
+.breadcrumb {
+  font-size: 15px;
+  margin-top: 0px;
 }
-img{
-    background-color: white;
+img {
+  background-color: white;
 }
-button{
-    background-color: #0074cc !important;
+button {
+  background-color: #0074cc !important;
 }
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .productSpecs{
-        width: 100%;
-    }
+  /* For mobile phones: */
+  .productSpecs {
+    width: 100%;
   }
+}
