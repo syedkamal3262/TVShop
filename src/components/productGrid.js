@@ -41,7 +41,6 @@ export default function ProductGrid({ product }) {
           <Grid item>
             <ButtonBase className={classes.image}>
               <Img
-                durationFadeIn={6000}
                 style={{ width: "100%", height: "auto" }}
                 fluid={product.image.fluid}
                 alt={product.sku}

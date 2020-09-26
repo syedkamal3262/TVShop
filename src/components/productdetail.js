@@ -26,7 +26,6 @@ export default function ProductDetail({ data }) {
         <Grid item sm={6} xs={12}>
           <Paper className={classes.paper}>
             <Img
-              durationFadeIn={6000}
               style={{ width: "100%", height: "auto" }}
               fluid={data.image.fluid}
               alt={data.sku}
