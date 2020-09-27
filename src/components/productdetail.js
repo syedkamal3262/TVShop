@@ -3,8 +3,9 @@ import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
-import { navigate } from "gatsby"
 import Img from "gatsby-image"
+import { useStateValue } from "../Context/StateProvider"
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -19,6 +20,14 @@ const useStyles = makeStyles(theme => ({
 
 export default function ProductDetail({ data }) {
   const classes = useStyles()
+  const [{ cart }, dispatch] = useStateValue()
+  const addtoCart = () => {
+    dispatch({
+      type: "ADD_PRODUCT",
+      item: data.sku,
+    })
+    console.log(cart)
+  }
 
   return (
     <div className={classes.root}>
@@ -61,11 +70,7 @@ export default function ProductDetail({ data }) {
                 </b>
               </h3>
             </div>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => navigate(`/cart/`, { state: { data: data } })}
-            >
+            <Button variant="contained" color="primary" onClick={addtoCart}>
               Add to Cart
             </Button>
           </Paper>

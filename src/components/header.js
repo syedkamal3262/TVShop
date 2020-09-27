@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "../css/App.css"
+import { useStateValue } from "../Context/StateProvider"
 
 export default function Header() {
   const headerStyle = {
@@ -12,6 +13,9 @@ export default function Header() {
     margin: "0px",
     border: "1px solid rgb(216, 220, 221)",
   }
+
+  const [{ cart }, dispatch] = useStateValue()
+  console.log(cart)
   return (
     <div style={headerStyle}>
       <h1
@@ -20,6 +24,7 @@ export default function Header() {
       >
         TV-Shop
       </h1>
+      {/* <button onClick={setstate}> </button> */}
       <ul>
         <li>
           <Link to="/">Home</Link>

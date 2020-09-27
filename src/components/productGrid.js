@@ -24,10 +24,10 @@ const useStyles = makeStyles(theme => ({
     height: 150,
   },
   img: {
-    // margin: "auto",
-    // display: "block",
-    // maxWidth: "100%",
-    // maxHeight: "100%",
+    margin: "auto",
+    display: "block",
+    maxWidth: "100%",
+    maxHeight: "100%",
   },
 }))
 
