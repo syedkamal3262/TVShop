@@ -8,9 +8,20 @@ const Cart = () => {
   console.log(cart)
   return (
     <Layout>
-      {cart.map(data => (
-        <Cartgrid key={Math.floor(Math.random() * 100)} data={data} />
-      ))}
+      <div
+        style={{
+          maxheight: "100%",
+        }}
+        className="cart"
+      >
+        <div className="cart__total">
+          <h3>Total {cart.length}</h3>
+          <h3>Cash : </h3>
+        </div>
+        {cart.map(data => (
+          <Cartgrid key={Math.floor(Math.random() * 100)} data={data} />
+        ))}
+      </div>
     </Layout>
   )
 }

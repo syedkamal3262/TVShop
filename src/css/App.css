@@ -111,4 +111,19 @@ img {
   display: flex;
   direction: row;
   align-items: center;
+  margin: 0px;
+  font-size: 12px;
+}
+.cart__box {
+  border: 0.1px solid grey;
+  margin-bottom: 5px;
+  border-radius: 0.5rem;
+}
+.cart__delete {
+  border-radius: 1rem;
+  border: 0.1px solid grey;
+}
+.cart__total {
+  display: flex;
+  justify-content: space-evenly;
 }
