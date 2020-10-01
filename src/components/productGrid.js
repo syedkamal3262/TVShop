@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography"
 import ButtonBase from "@material-ui/core/ButtonBase"
 import Button from "@material-ui/core/Button"
 import { navigate } from "gatsby"
+import { useStateValue } from "../Context/StateProvider"
 
 import Img from "gatsby-image"
 
@@ -33,7 +34,19 @@ const useStyles = makeStyles(theme => ({
 
 export default function ProductGrid({ product }) {
   const classes = useStyles()
-
+  const [{ cart }, dispatch] = useStateValue()
+  const addtoCart = () => {
+    dispatch({
+      type: "ADD_PRODUCT",
+      item: {
+        sku: product.sku,
+        priceNow: product.priceNow,
+        pricewas: product.pricewas,
+        title: product.title,
+      },
+    })
+    console.log(cart)
+  }
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
@@ -78,11 +91,22 @@ export default function ProductGrid({ product }) {
               <Grid item>
                 <Typography variant="body2" style={{ cursor: "pointer" }}>
                   <Button
+                    className="infoButton"
                     onClick={() => navigate(`/products/${product.sku}`)}
-                    variant="contained"
+                    variant="outlined"
                     color="primary"
+                    style={{ margin: "5px" }}
                   >
                     More info
+                  </Button>
+
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className="cartbutton"
+                    onClick={addtoCart}
+                  >
+                    Add to Cart
                   </Button>
                 </Typography>
               </Grid>

@@ -7,7 +7,9 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <div>
-        <p className="breadcrumb">Home / TV</p>
+        <p className="breadcrumb">
+          Home / TV <b>({data.allContentfulProduct.totalCount})</b>
+        </p>
         {data.allContentfulProduct.nodes.map(product => (
           <ProductGrid key={product.sku} product={product} />
         ))}
@@ -34,6 +36,7 @@ export const query = graphql`
         pricewas
         instock
       }
+      totalCount
     }
   }
 `

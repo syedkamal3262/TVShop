@@ -15,9 +15,7 @@ const footer = () => {
             shop for you !
           </h1>
           <p style={{ margin: "0px", padding: "0px", textAlign: "center" }}>
-            TVshop.com is operated by TVshop Retail Limited, registered in
-            England with company number 02556638 whose registered office is at
-            5a, The landsPark, stockLostock, Tonbol, 4FR PL6
+            TVshop.com is operated by TVshop Retail Limited
             <br />
             The goods you buy from this site will be purchased from TVshop
             Retail Limited

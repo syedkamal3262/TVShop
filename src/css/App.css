@@ -86,12 +86,29 @@ hr {
 img {
   background-color: white;
 }
-button {
+.cartbutton {
   background-color: #0074cc !important;
+  color: white !important;
+  margin-right: 1px;
+}
+.infoButton {
+  color: #0074cc !important;
+  border-color: #0074cc !important;
+}
+.infoButton:hover {
+  border-color: #0074cc !important;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .productSpecs {
     width: 100%;
   }
+}
+.cart__grid > li:nth-child(1) {
+  flex: 1;
+}
+.cart__grid > li {
+  display: flex;
+  direction: row;
+  align-items: center;
 }

@@ -24,9 +24,13 @@ export default function ProductDetail({ data }) {
   const addtoCart = () => {
     dispatch({
       type: "ADD_PRODUCT",
-      item: data.sku,
+      item: {
+        sku: data.sku,
+        priceNow: data.priceNow,
+        pricewas: data.pricewas,
+        title: data.title,
+      },
     })
-    console.log(cart)
   }
 
   return (
@@ -70,7 +74,12 @@ export default function ProductDetail({ data }) {
                 </b>
               </h3>
             </div>
-            <Button variant="contained" color="primary" onClick={addtoCart}>
+            <Button
+              className="cartbutton"
+              variant="contained"
+              color="primary"
+              onClick={addtoCart}
+            >
               Add to Cart
             </Button>
           </Paper>

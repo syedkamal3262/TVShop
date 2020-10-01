@@ -1,6 +1,13 @@
 export const initialState = {
   user: "kamal",
-  cart: ["VEL32FO01UK"],
+  cart: [
+    {
+      priceNow: "199",
+      pricewas: null,
+      sku: "TX-32G302B",
+      title: 'Panasonic TX-32G302B 32" 720p HD Ready TV',
+    },
+  ],
 }
 
 export function reducer(state, action) {
